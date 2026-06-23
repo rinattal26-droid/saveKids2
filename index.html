@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>SaveKids</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SaveKids">
+<meta name="theme-color" content="#3DBE8F">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-title" content="SaveKids">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E8F8F2'/><text y='.9em' font-size='80' x='10'>🐷</text></svg>">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+/* ===== פלטת צבעים פסטל ===== */
+:root {
+  --bg: #F7F4FF;
+  --card: #FFFFFF;
+  --green: #3DBE8F;
+  --green-light: #E6F8F2;
+  --green-dark: #2A9D76;
+  --coral: #FF7C6E;
+  --coral-light: #FFF0EE;
+  --purple: #8B7FF5;
+  --purple-light: #EEECFF;
+  --yellow: #FFD166;
+  --yellow-light: #FFF8E6;
+  --blue: #6BB8F5;
+  --blue-light: #EBF5FF;
+  --text: #2D2D3A;
+  --text-sub: #9B97B0;
+  --border: #EDE9FF;
+  --shadow: 0 4px 16px rgba(139,127,245,0.08);
+  --shadow-sm: 0 2px 8px rgba(139,127,245,0.06);
+}
+
+body { background: var(--bg); direction: rtl; }
+.app { max-width: 430px; margin: 0 auto; background: var(--bg); min-height: 100vh; position: relative; padding-bottom: 80px; }
+.screen { display: none; padding: 16px; }
+.screen.active { display: block; }
+
+/* ===== ניווט תחתון ===== */
+.nav-bar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 430px; max-width: 100vw; background: white; border-top: none; box-shadow: 0 -4px 20px rgba(139,127,245,0.1); display: flex; justify-content: space-around; padding: 8px 0 16px; z-index: 100; border-radius: 20px 20px 0 0; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; color: var(--text-sub); font-size: 10px; padding: 4px 8px; transition: all 0.15s; }
+.nav-item.active { color: var(--purple); }
+.nav-item.active svg { stroke: var(--purple); }
+.nav-item svg { width: 22px; height: 22px; }
+
+/* ===== כרטיסים ===== */
+.card { background: var(--card); border-radius: 20px; padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+
+/* ===== כפתורים ===== */
+.btn-primary { background: linear-gradient(135deg, var(--purple), #A78BF7); color: white; border: none; border-radius: 14px; padding: 14px 20px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 4px 14px rgba(139,127,245,0.35); transition: transform 0.1s; }
+.btn-primary:active { transform: scale(0.98); }
+.btn-success { background: linear-gradient(135deg, var(--green), #52D9A8); color: white; border: none; border-radius: 12px; padding: 10px 18px; font-size: 14px; font-weight: 700; cursor: pointer; box-shadow: 0 3px 10px rgba(61,190,143,0.3); }
+
+/* ===== מסך בית ===== */
+.greeting { text-align: center; padding: 12px 0 16px; }
+.greeting h2 { font-size: 22px; font-weight: 800; color: var(--text); }
+.greeting p { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
+
+.budget-card { background: linear-gradient(135deg, #FF7C6E, #FF9A8B); border-radius: 24px; padding: 20px; margin-bottom: 12px; color: white; box-shadow: 0 8px 24px rgba(255,124,110,0.3); }
+.budget-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.budget-top h3 { font-size: 15px; font-weight: 600; opacity: 0.95; }
+.days-badge { background: rgba(255,255,255,0.28); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
+.budget-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.budget-stat { background: rgba(255,255,255,0.22); border-radius: 14px; padding: 10px 8px; text-align: center; backdrop-filter: blur(4px); }
+.budget-stat .val { font-size: 15px; font-weight: 700; }
+.budget-stat .lbl { font-size: 11px; opacity: 0.85; margin-top: 3px; }
+.progress-label { display: flex; justify-content: space-between; font-size: 12px; opacity: 0.9; margin-bottom: 6px; font-weight: 600; }
+.progress-bar { background: rgba(255,255,255,0.3); border-radius: 6px; height: 10px; overflow: hidden; }
+.progress-fill { background: white; height: 100%; border-radius: 6px; }
+
+.alert-card { background: var(--coral-light); border: 1.5px solid #FFB5AE; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+.alert-text { color: #D94F42; font-size: 14px; font-weight: 700; }
+
+.savings-section { background: var(--card); border-radius: 20px; padding: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.savings-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.savings-header h4 { font-size: 14px; font-weight: 700; color: var(--text); }
+.savings-header span { font-size: 13px; color: var(--text-sub); }
+.goal-bar-wrap { background: var(--green-light); border-radius: 6px; height: 10px; margin: 8px 0; overflow: hidden; }
+.goal-fill { background: linear-gradient(90deg, var(--green), #52D9A8); height: 100%; border-radius: 6px; }
+.goal-footer { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-sub); }
+
+/* ===== הוספת הוצאה ===== */
+.section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.cat-btn { background: var(--card); border: 2px solid var(--border); border-radius: 16px; padding: 12px 6px; text-align: center; cursor: pointer; transition: all 0.15s; }
+.cat-btn.active { border-color: var(--green); background: var(--green-light); }
+.cat-icon { font-size: 26px; display: block; margin-bottom: 4px; }
+.cat-name { font-size: 12px; color: var(--text-sub); font-weight: 500; }
+.amount-box { background: var(--purple-light); border-radius: 20px; padding: 22px; text-align: center; margin-bottom: 18px; border: 1.5px solid var(--border); }
+.amount-label { font-size: 13px; color: var(--purple); margin-bottom: 8px; font-weight: 600; }
+.amount-row { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.currency-symbol { font-size: 26px; color: var(--purple); font-weight: 700; }
+.amount-input { background: transparent; border: none; outline: none; font-size: 40px; font-weight: 800; text-align: center; color: var(--text); width: 160px; direction: ltr; }
+.note-input { width: 100%; border: 2px solid var(--border); border-radius: 14px; padding: 12px 14px; font-size: 14px; background: white; color: var(--text); resize: none; outline: none; font-family: inherit; transition: border 0.15s; }
+.note-input:focus { border-color: var(--purple); }
+
+/* ===== דוחות ===== */
+.insight-card { background: var(--yellow-light); border: 1.5px solid #FFE8A0; border-radius: 18px; padding: 14px 16px; margin-bottom: 12px; }
+.insight-title { color: #B07A00; font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.insight-text { color: #7A5500; font-size: 13px; line-height: 1.6; }
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.stat-box { background: var(--card); border-radius: 16px; padding: 12px 8px; text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.stat-val { font-size: 14px; font-weight: 700; }
+.stat-lbl { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
+.red { color: var(--coral); }
+.green { color: var(--green-dark); }
+.donut-section { display: flex; align-items: center; gap: 16px; }
+.legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.legend-name { font-size: 13px; color: var(--text); font-weight: 500; }
+.legend-amount { font-size: 12px; color: var(--text-sub); }
+.rank-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.rank-num { font-size: 13px; color: var(--text-sub); width: 22px; flex-shrink: 0; font-weight: 600; }
+.rank-icon { width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.rank-info { flex: 1; min-width: 0; }
+.rank-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.rank-bar-wrap { height: 5px; background: var(--bg); border-radius: 3px; margin-top: 5px; }
+.rank-bar { height: 5px; border-radius: 3px; }
+.rank-right { text-align: left; flex-shrink: 0; }
+.rank-amount { font-size: 13px; font-weight: 700; color: var(--text); }
+.rank-pct { font-size: 11px; color: var(--text-sub); }
+.export-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.btn-pdf { background: var(--blue-light); color: #1855a0; border: 1.5px solid #B8D9F8; border-radius: 14px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.btn-excel { background: var(--green-light); color: #1A6B4A; border: 1.5px solid #B0E8D4; border-radius: 14px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; }
+
+/* ===== הכנסות ===== */
+.income-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.income-green-card { background: linear-gradient(135deg, var(--green), #52D9A8); border-radius: 24px; padding: 22px; color: white; margin-bottom: 16px; box-shadow: 0 8px 24px rgba(61,190,143,0.28); }
+.income-label { font-size: 13px; opacity: 0.85; margin-bottom: 4px; font-weight: 600; }
+.income-amount { font-size: 40px; font-weight: 800; }
+.income-month { font-size: 13px; opacity: 0.7; margin-top: 4px; }
+.empty-state { text-align: center; padding: 48px 20px; }
+.empty-emoji { font-size: 52px; margin-bottom: 16px; }
+.empty-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.empty-sub { font-size: 14px; color: var(--text-sub); }
+
+/* ===== ילדים ===== */
+.emoji-pick { font-size: 28px; cursor: pointer; padding: 6px; border-radius: 12px; border: 2px solid transparent; transition: all 0.15s; }
+.emoji-pick.active-emoji { border-color: var(--green); background: var(--green-light); }
+.kid-card { background: var(--card); border-radius: 22px; padding: 18px; margin-bottom: 12px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.kid-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.kid-avatar-big { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.kid-name-big { font-size: 17px; font-weight: 800; color: var(--text); }
+.kid-goal-label { font-size: 12px; color: var(--text-sub); margin-top: 2px; font-weight: 500; }
+.kid-amounts { display: flex; justify-content: space-between; margin-bottom: 12px; background: var(--bg); border-radius: 14px; padding: 10px; }
+.kid-amount-box { text-align: center; flex: 1; }
+.kid-amount-val { font-size: 15px; font-weight: 800; }
+.kid-amount-lbl { font-size: 10px; color: var(--text-sub); margin-top: 2px; font-weight: 500; }
+.kid-progress-wrap { background: var(--green-light); border-radius: 8px; height: 12px; margin-bottom: 8px; overflow: hidden; }
+.kid-progress-fill { height: 100%; border-radius: 8px; background: linear-gradient(90deg, var(--green), #52D9A8); transition: width 0.7s cubic-bezier(.4,0,.2,1); }
+.kid-progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-sub); margin-bottom: 12px; font-weight: 500; }
+.kid-actions { display: flex; gap: 8px; }
+.btn-deposit { flex: 1; background: linear-gradient(135deg, var(--green), #52D9A8); color: white; border: none; border-radius: 12px; padding: 11px; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 3px 10px rgba(61,190,143,0.25); }
+.btn-delete-kid { background: var(--coral-light); color: var(--coral); border: none; border-radius: 12px; padding: 11px 14px; font-size: 13px; font-weight: 700; cursor: pointer; }
+
+/* ===== פרמיום ===== */
+.premium-hero { background: linear-gradient(135deg, var(--purple), #B8ACFF); border-radius: 24px; padding: 30px 20px; text-align: center; color: white; margin-bottom: 16px; box-shadow: 0 8px 28px rgba(139,127,245,0.35); }
+.premium-hero h2 { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+.premium-hero p { font-size: 13px; opacity: 0.9; margin-bottom: 18px; }
+.btn-white { background: white; color: var(--purple); border: none; border-radius: 14px; padding: 14px 20px; font-size: 15px; font-weight: 800; cursor: pointer; width: 100%; box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+.premium-price { font-size: 12px; opacity: 0.75; margin-top: 10px; }
+.feat-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text); font-weight: 500; }
+.feat-check { color: var(--purple); font-size: 20px; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th { padding: 8px 6px; text-align: center; font-weight: 700; color: var(--text); }
+.compare-table th:first-child { text-align: right; }
+.compare-table .premium-col { color: var(--purple); }
+.compare-table td { padding: 10px 6px; border-top: 1px solid var(--border); color: var(--text); font-weight: 500; }
+.compare-table td:not(:first-child) { text-align: center; }
+
+/* ===== פרופיל ===== */
+.profile-hero { background: linear-gradient(135deg, var(--purple), #B8ACFF); border-radius: 24px; padding: 28px 20px; text-align: center; color: white; margin-bottom: 16px; box-shadow: 0 8px 24px rgba(139,127,245,0.3); }
+.profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.28); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 40px; border: 3px solid rgba(255,255,255,0.6); }
+.profile-name { font-size: 22px; font-weight: 800; margin-bottom: 2px; }
+.profile-sub { font-size: 13px; opacity: 0.85; }
+.member-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.member-item:last-child { border-bottom: none; }
+.member-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.member-info { flex: 1; }
+.member-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.member-role { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+.member-badge { font-size: 11px; padding: 4px 12px; border-radius: 20px; font-weight: 700; }
+.badge-parent { background: var(--coral-light); color: #D94F42; }
+.badge-child { background: var(--green-light); color: var(--green-dark); }
+.setting-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.setting-row:last-child { border-bottom: none; }
+.setting-label { font-size: 15px; color: var(--text); font-weight: 500; }
+.setting-val { font-size: 14px; color: var(--text-sub); }
+.toggle { width: 50px; height: 28px; background: var(--green); border-radius: 14px; position: relative; cursor: pointer; transition: background 0.2s; box-shadow: 0 2px 6px rgba(61,190,143,0.3); }
+.toggle::after { content:''; position: absolute; width: 22px; height: 22px; background: white; border-radius: 50%; top: 3px; right: 3px; transition: right 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.toggle.off { background: #DDD9F0; box-shadow: none; }
+.toggle.off::after { right: calc(100% - 25px); }
+.budget-input-row { display: flex; align-items: center; gap: 8px; }
+.budget-field { flex: 1; border: 2px solid var(--border); border-radius: 12px; padding: 10px 12px; font-size: 15px; text-align: left; direction: ltr; outline: none; transition: border 0.15s; font-family: inherit; }
+.budget-field:focus { border-color: var(--purple); }
+.save-btn { background: var(--purple); color: white; border: none; border-radius: 10px; padding: 10px 18px; font-size: 14px; font-weight: 700; cursor: pointer; }
+@keyframes floatStar { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-8px) rotate(15deg); } }
+@keyframes crownBounce { 0%,100% { transform: scale(1) rotate(-3deg); } 50% { transform: scale(1.12) rotate(3deg); } }
+@keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes fadeSlide { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+.screen-title { font-size: 22px; font-weight: 800; margin-bottom: 16px; color: var(--text); }
+/* Onboarding & Auth */
+.ob-screen { display:none; position:fixed; inset:0; background:var(--bg); z-index:500; flex-direction:column; align-items:center; justify-content:center; padding:32px 24px; text-align:center; animation:fadeSlide 0.35s ease; }
+.ob-screen.active { display:flex; }
+.ob-illustration { font-size:90px; margin-bottom:24px; animation:crownBounce 2.5s ease-in-out infinite; }
+.ob-title { font-size:26px; font-weight:900; color:var(--text); margin-bottom:10px; }
+.ob-sub { font-size:15px; color:var(--text-sub); line-height:1.6; margin-bottom:36px; }
+.ob-dots { display:flex; gap:8px; justify-content:center; margin-bottom:32px; }
+.ob-dot { width:8px; height:8px; border-radius:50%; background:var(--border); transition:all 0.3s; }
+.ob-dot.active { width:24px; border-radius:4px; background:var(--purple); }
+.ob-btn { background:linear-gradient(135deg,var(--purple),#A78BF7); color:white; border:none; border-radius:16px; padding:16px; font-size:16px; font-weight:800; cursor:pointer; width:100%; box-shadow:0 6px 20px rgba(108,99,255,0.3); margin-bottom:12px; }
+.ob-skip { background:none; border:none; color:var(--text-sub); font-size:14px; cursor:pointer; padding:8px; }
+.auth-input { width:100%; border:2px solid var(--border); border-radius:14px; padding:14px 16px; font-size:15px; outline:none; font-family:inherit; color:var(--text); background:white; transition:border 0.15s; margin-bottom:12px; direction:rtl; }
+.auth-input:focus { border-color:var(--purple); }
+.auth-link { color:var(--purple); font-weight:700; cursor:pointer; }
+
+</style>
+</head>
+<body>
+
+<!-- ===== ONBOARDING ===== -->
+<div class="ob-screen active" id="ob-1">
+  <div class="ob-illustration">🐷</div>
+  <h1 class="ob-title">ברוכים הבאים ל-SaveKids!</h1>
+  <p class="ob-sub">הדרך הכי כיפית לנהל תקציב משפחתי וללמד את הילדים לחסוך 💚</p>
+  <div class="ob-dots">
+    <div class="ob-dot active"></div>
+    <div class="ob-dot"></div>
+    <div class="ob-dot"></div>
+  </div>
+  <button class="ob-btn" onclick="nextOb(2)">קדימה! ←</button>
+  <button class="ob-skip" onclick="goToAuth()">דלג</button>
+</div>
+
+<div class="ob-screen" id="ob-2">
+  <div class="ob-illustration">📊</div>
+  <h1 class="ob-title">עקבו אחרי כל שקל</h1>
+  <p class="ob-sub">הוסיפו הוצאות והכנסות בקלות, קבלו תובנות חכמות ואל תחרגו מהתקציב שוב 🎯</p>
+  <div class="ob-dots">
+    <div class="ob-dot"></div>
+    <div class="ob-dot active"></div>
+    <div class="ob-dot"></div>
+  </div>
+  <button class="ob-btn" onclick="nextOb(3)">המשך ←</button>
+  <button class="ob-skip" onclick="goToAuth()">דלג</button>
+</div>
+
+<div class="ob-screen" id="ob-3">
+  <div class="ob-illustration">🎉</div>
+  <h1 class="ob-title">יעדי חיסכון לילדים</h1>
+  <p class="ob-sub">הגדירו יעד לכל ילד, עקבו אחרי ההתקדמות וחגגו ביחד כשמגיעים ליעד! 🏆</p>
+  <div class="ob-dots">
+    <div class="ob-dot"></div>
+    <div class="ob-dot"></div>
+    <div class="ob-dot active"></div>
+  </div>
+  <button class="ob-btn" onclick="goToAuth()">בואו נתחיל! 🚀</button>
+</div>
+
+<!-- ===== AUTH ===== -->
+<div class="ob-screen" id="auth-screen">
+  <div style="width:100%;max-width:380px;">
+    <div style="text-align:center;margin-bottom:28px;">
+      <div style="font-size:52px;margin-bottom:12px;">🐷</div>
+      <h1 style="font-size:24px;font-weight:900;color:var(--text);margin-bottom:4px;">SaveKids</h1>
+      <p id="auth-subtitle" style="font-size:14px;color:var(--text-sub);">הרשמה ליצירת חשבון</p>
+    </div>
+
+    <div id="register-form">
+      <input class="auth-input" type="text" id="reg-name" placeholder="שם מלא" />
+      <input class="auth-input" type="text" id="reg-family" placeholder="שם משפחה" />
+      <input class="auth-input" type="email" id="reg-email" placeholder="אימייל" />
+      <input class="auth-input" type="password" id="reg-pass" placeholder="סיסמה (לפחות 6 תווים)" />
+      <input class="auth-input" type="number" id="reg-budget" placeholder="תקציב חודשי (₪)" />
+      <button class="ob-btn" onclick="doRegister()">צור חשבון 🎉</button>
+      <p style="text-align:center;font-size:13px;color:var(--text-sub);margin-top:8px;">כבר יש לך חשבון? <span class="auth-link" onclick="switchToLogin()">התחבר</span></p>
+    </div>
+
+    <div id="login-form" style="display:none;">
+      <input class="auth-input" type="email" id="log-email" placeholder="אימייל" />
+      <input class="auth-input" type="password" id="log-pass" placeholder="סיסמה" />
+      <button class="ob-btn" onclick="doLogin()">התחבר 👋</button>
+      <p style="text-align:center;font-size:13px;color:var(--text-sub);margin-top:8px;"><span class="auth-link" onclick="forgotPassword()">שכחתי סיסמה 🔑</span></p>
+      <p style="text-align:center;font-size:13px;color:var(--text-sub);margin-top:6px;">אין לך חשבון? <span class="auth-link" onclick="switchToRegister()">הרשמה</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+
+  <!-- HOME -->
+  <div class="screen active" id="screen-home">
+    <div class="greeting">
+      <h2 id="home-greeting">👋 שלום!</h2>
+      <p>בואו נראה איך מתקדם החיסכון שלכם החודש</p>
+    </div>
+
+    <div class="budget-card">
+      <div class="budget-top">
+        <h3>💰 תקציב חודשי</h3>
+        <span class="days-badge" id="days-badge">10 ימים נשארו</span>
+      </div>
+      <div class="budget-stats">
+        <div class="budget-stat"><div class="val" id="stat-budget">₪0</div><div class="lbl">תקציב</div></div>
+        <div class="budget-stat"><div class="val" id="stat-expenses">₪0</div><div class="lbl">הוצאות</div></div>
+        <div class="budget-stat"><div class="val" id="stat-diff">₪0</div><div class="lbl">נותר</div></div>
+      </div>
+      <div class="progress-label"><span>שימוש בתקציב</span><span id="budget-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="budget-bar" style="width:0%"></div></div>
+    </div>
+
+    <div id="alert-over" class="alert-card" style="display:none;">
+      <span class="alert-text">חרגתם מהתקציב החודשי!</span>
+      <span style="font-size:24px;">🔴</span>
+    </div>
+
+    <div class="savings-section">
+      <div class="savings-header">
+        <h4>🎯 יעד חיסכון</h4>
+        <span id="goal-display">יעד: ₪0</span>
+      </div>
+      <div style="font-size:13px;color:var(--text-sub);margin-bottom:6px;">חסכת השנה: ₪0</div>
+      <div class="goal-bar-wrap"><div class="goal-fill" style="width:0%"></div></div>
+      <div class="goal-footer"><span>0%</span><span id="goal-remain">₪0 נותרו</span></div>
+    </div>
+  </div>
+
+  <!-- ADD EXPENSE -->
+  <div class="screen" id="screen-add">
+    <h1 class="screen-title">הוסף הוצאה</h1>
+    <div class="amount-box">
+      <div class="amount-label">סכום</div>
+      <div class="amount-row">
+        <span class="currency-symbol">₪</span>
+        <input class="amount-input" type="number" id="amount-input" placeholder="0" />
+      </div>
+    </div>
+
+    <div class="section-title">קטגוריה</div>
+    <div class="cat-grid">
+      <div class="cat-btn active" onclick="selectCat(this)"><span class="cat-icon">🍽️</span><span class="cat-name">אוכל</span></div>
+      <div class="cat-btn" onclick="selectCat(this)"><span class="cat-icon">🛍️</span><span class="cat-name">קניות</span></div>
+      <div class="cat-btn" onclick="selectCat(this)"><span class="cat-icon">📄</span><span class="cat-name">חשבונות</span></div>
+      <div class="cat-btn" onclick="selectCat(this)"><span class="cat-icon">🚗</span><span class="cat-name">רכב</span></div>
+      <div class="cat-btn" onclick="selectCat(this)"><span class="cat-icon">👶</span><span class="cat-name">ילדים</span></div>
+      <div class="cat-btn" onclick="selectCat(this)"><span class="cat-icon">❤️</span><span class="cat-name">בריאות</span></div>
+    </div>
+
+    <div class="section-title">הערה</div>
+    <textarea class="note-input" rows="2" placeholder="הוסף הערה (אופציונלי)..."></textarea>
+
+    <div style="margin-top:18px;">
+      <button class="btn-primary" onclick="addExpense()">שמור הוצאה</button>
+    </div>
+  </div>
+
+  <!-- REPORTS -->
+  <div class="screen" id="screen-reports">
+    <h1 style="font-size:20px;font-weight:700;margin-bottom:4px;">🔍 תובנות פיננסיות</h1>
+    <p style="font-size:13px;color:var(--text-sub);margin-bottom:16px;">קבלו תובנות על ההוצאות והחיסכון שלכם</p>
+
+    <div class="insight-card" id="insight-card">
+      <div class="insight-title">💡 התובנה החודשית</div>
+      <div class="insight-text" id="insight-text">עדיין אין מספיק נתונים — הוסיפו הוצאות כדי לקבל תובנות! 📊</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-val" id="rep-balance" style="color:var(--text);">₪0</div><div class="stat-lbl">מאזן</div></div>
+      <div class="stat-box"><div class="stat-val red" id="rep-expenses">₪0</div><div class="stat-lbl">הוצאות</div></div>
+      <div class="stat-box"><div class="stat-val green" id="rep-income">₪0</div><div class="stat-lbl">הכנסות</div></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">📊 הכנסות מול הוצאות – 6 חודשים</div>
+      <div style="display:flex;gap:14px;margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;"><div style="width:12px;height:12px;border-radius:3px;background:var(--green);"></div>הכנסות</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;"><div style="width:12px;height:12px;border-radius:3px;background:var(--coral);"></div>הוצאות</div>
+      </div>
+      <canvas id="bar-chart" width="340" height="200" style="width:100%;"></canvas>
+      <div id="bar-tooltip" style="display:none;background:white;border:1px solid #e5e5ea;border-radius:10px;padding:8px 12px;font-size:13px;position:absolute;box-shadow:0 2px 8px rgba(0,0,0,0.12);z-index:10;"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">🥧 הוצאות לפי קטגוריה</div>
+      <div id="donut-section-wrap">
+        <div class="empty-state" style="padding:20px;">
+          <div class="empty-emoji">📊</div>
+          <div class="empty-title" style="font-size:14px;">עדיין אין הוצאות</div>
+          <div class="empty-sub">הוסיפו הוצאות כדי לראות גרף</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">🏆 קטגוריות מובילות</div>
+      <div id="rank-list-wrap">
+        <div style="text-align:center;padding:16px;font-size:13px;color:var(--text-sub);">עדיין אין נתונים להצגה</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="margin-bottom:4px;">📤 ייצוא דוח חודשי</div>
+      <p style="font-size:13px;color:var(--text-sub);margin-bottom:12px;">ייצא את הדוח הפיננסי החודשי שלך</p>
+      <div class="export-row">
+        <button class="btn-pdf">📄 ייצוא ל-PDF</button>
+        <button class="btn-excel">📊 ייצוא ל-Excel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INCOME -->
+  <div class="screen" id="screen-income">
+    <div class="income-header">
+      <h1 class="screen-title" style="margin-bottom:0;">הכנסות 📥</h1>
+      <button class="btn-success" onclick="showAddIncomeModal()">+ הוסף</button>
+    </div>
+    <div class="income-green-card">
+      <div class="income-label">💰 הכנסות החודש</div>
+      <div class="income-amount" id="income-total-display">₪0</div>
+      <div class="income-month" id="income-month-display"></div>
+    </div>
+    <div id="income-empty-state" class="empty-state">
+      <div class="empty-emoji">📥</div>
+      <div class="empty-title">עדיין אין הכנסות</div>
+      <div class="empty-sub">הוסיפו את ההכנסה הראשונה שלכם!</div>
+    </div>
+    <div id="income-list"></div>
+  </div>
+
+  <!-- MODAL הוספת הכנסה -->
+  <div id="add-income-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:300;align-items:flex-end;justify-content:center;">
+    <div style="background:white;border-radius:24px 24px 0 0;padding:24px;width:100%;max-width:430px;animation:fadeSlide 0.25s ease;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+        <h3 style="font-size:18px;font-weight:800;color:var(--text);">הוסף הכנסה 💰</h3>
+        <button onclick="hideAddIncomeModal()" style="background:var(--bg);border:none;border-radius:10px;width:32px;height:32px;font-size:18px;cursor:pointer;">✕</button>
+      </div>
+      <div class="amount-box" style="margin-bottom:14px;">
+        <div class="amount-label">סכום</div>
+        <div class="amount-row">
+          <span class="currency-symbol">₪</span>
+          <input class="amount-input" type="number" id="income-amount-input" placeholder="0" />
+        </div>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div class="section-title" style="margin-bottom:8px;">מקור</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div class="cat-btn active" onclick="selectIncomeSource(this)" data-src="משכורת"><span class="cat-icon">💼</span><span class="cat-name">משכורת</span></div>
+          <div class="cat-btn" onclick="selectIncomeSource(this)" data-src="פרילנס"><span class="cat-icon">💻</span><span class="cat-name">פרילנס</span></div>
+          <div class="cat-btn" onclick="selectIncomeSource(this)" data-src="בונוס"><span class="cat-icon">🎁</span><span class="cat-name">בונוס</span></div>
+          <div class="cat-btn" onclick="selectIncomeSource(this)" data-src="אחר"><span class="cat-icon">📦</span><span class="cat-name">אחר</span></div>
+        </div>
+      </div>
+      <textarea class="note-input" id="income-note-input" rows="2" placeholder="הערה (אופציונלי)..."></textarea>
+      <div style="margin-top:16px;">
+        <button class="btn-primary" style="background:linear-gradient(135deg,var(--green),#52D9A8);" onclick="addIncome()">שמור הכנסה ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- KIDS -->
+  <div class="screen" id="screen-kids">
+    <div class="income-header">
+      <h1 class="screen-title" style="margin-bottom:0;">👶 חיסכון לילדים</h1>
+      <button class="btn-success" onclick="showAddKidForm()">+ הוסף ילד</button>
+    </div>
+
+    <!-- סיכום כולל -->
+    <div style="background:linear-gradient(135deg,#1a9e75,#2dc99a);border-radius:20px;padding:20px;color:white;margin-bottom:14px;">
+      <div style="font-size:13px;opacity:0.85;margin-bottom:4px;">💰 סה"כ חסכתם לילדים</div>
+      <div id="kids-total" style="font-size:36px;font-weight:700;">₪0</div>
+      <div style="font-size:13px;opacity:0.75;margin-top:2px;" id="kids-summary">0 ילדים • 0 יעדים פעילים</div>
+    </div>
+
+    <!-- רשימת ילדים -->
+    <div id="kids-list"></div>
+
+    <!-- מצב ריק -->
+    <div id="kids-empty" class="empty-state">
+      <div class="empty-emoji">👶</div>
+      <div class="empty-title">עדיין אין יעדי חיסכון</div>
+      <div class="empty-sub">לחצו על "+ הוסף ילד" כדי להתחיל לחסוך</div>
+    </div>
+
+    <!-- מודאל הוספת ילד -->
+    <div id="add-kid-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:200;align-items:flex-end;justify-content:center;">
+      <div style="background:white;border-radius:24px 24px 0 0;padding:24px;width:100%;max-width:430px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+          <h3 style="font-size:18px;font-weight:700;">הוספת ילד</h3>
+          <button onclick="hideAddKidForm()" style="background:none;border:none;font-size:22px;cursor:pointer;color:#8e8e93;">✕</button>
+        </div>
+        <div style="margin-bottom:14px;">
+          <label style="font-size:13px;color:#8e8e93;display:block;margin-bottom:6px;">שם הילד/ה</label>
+          <input id="kid-name" type="text" placeholder="למשל: נועה" style="width:100%;border:1.5px solid #e5e5ea;border-radius:12px;padding:12px 14px;font-size:15px;outline:none;font-family:inherit;" />
+        </div>
+        <div style="margin-bottom:14px;">
+          <label style="font-size:13px;color:#8e8e93;display:block;margin-bottom:6px;">אמוג'י / אווטאר</label>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <span class="emoji-pick active-emoji" onclick="pickEmoji(this)">👦</span>
+            <span class="emoji-pick" onclick="pickEmoji(this)">👧</span>
+            <span class="emoji-pick" onclick="pickEmoji(this)">🧒</span>
+            <span class="emoji-pick" onclick="pickEmoji(this)">👼</span>
+            <span class="emoji-pick" onclick="pickEmoji(this)">🦸</span>
+            <span class="emoji-pick" onclick="pickEmoji(this)">🦄</span>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <label style="font-size:13px;color:#8e8e93;display:block;margin-bottom:6px;">יעד חיסכון (₪)</label>
+          <input id="kid-goal" type="number" placeholder="למשל: 2000" style="width:100%;border:1.5px solid #e5e5ea;border-radius:12px;padding:12px 14px;font-size:15px;outline:none;font-family:inherit;direction:ltr;" />
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="font-size:13px;color:#8e8e93;display:block;margin-bottom:6px;">מטרת החיסכון</label>
+          <input id="kid-goal-name" type="text" placeholder="למשל: אופניים, טיול, מחשב..." style="width:100%;border:1.5px solid #e5e5ea;border-radius:12px;padding:12px 14px;font-size:15px;outline:none;font-family:inherit;" />
+        </div>
+        <button class="btn-primary" onclick="addKid()">הוסף לתוכנית החיסכון ✨</button>
+      </div>
+    </div>
+
+    <!-- מודאל הוספת סכום -->
+    <div id="add-savings-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:200;align-items:flex-end;justify-content:center;">
+      <div style="background:white;border-radius:24px 24px 0 0;padding:24px;width:100%;max-width:430px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+          <h3 style="font-size:18px;font-weight:700;" id="add-savings-title">הוסף חיסכון</h3>
+          <button onclick="hideAddSavings()" style="background:none;border:none;font-size:22px;cursor:pointer;color:#8e8e93;">✕</button>
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="font-size:13px;color:#8e8e93;display:block;margin-bottom:6px;">סכום להפקדה (₪)</label>
+          <input id="savings-amount" type="number" placeholder="0" style="width:100%;border:1.5px solid #e5e5ea;border-radius:12px;padding:14px;font-size:28px;font-weight:700;outline:none;text-align:center;direction:ltr;font-family:inherit;" />
+        </div>
+        <button class="btn-primary" onclick="depositSavings()">💰 הפקד</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREMIUM -->
+  <div class="screen" id="screen-premium">
+
+    <!-- HERO עם אנימציה -->
+    <div style="background:linear-gradient(160deg,#6C63FF,#A78BF7,#FF7C9E);border-radius:28px;padding:32px 20px 28px;text-align:center;color:white;margin-bottom:16px;position:relative;overflow:hidden;">
+      <!-- כוכבים מרחפים -->
+      <div class="star-float" style="position:absolute;top:14px;left:18px;font-size:18px;animation:floatStar 3s ease-in-out infinite;">⭐</div>
+      <div class="star-float" style="position:absolute;top:28px;right:22px;font-size:14px;animation:floatStar 2.4s ease-in-out infinite 0.5s;">✨</div>
+      <div class="star-float" style="position:absolute;bottom:24px;left:28px;font-size:16px;animation:floatStar 2.8s ease-in-out infinite 1s;">💫</div>
+      <div class="star-float" style="position:absolute;bottom:18px;right:16px;font-size:12px;animation:floatStar 3.2s ease-in-out infinite 0.3s;">⭐</div>
+
+      <!-- כתר מאנימציה -->
+      <div style="font-size:56px;margin-bottom:10px;animation:crownBounce 2s ease-in-out infinite;">👑</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:3px;opacity:0.85;margin-bottom:6px;text-transform:uppercase;">SaveKids</div>
+      <h2 style="font-size:30px;font-weight:900;margin-bottom:6px;">Premium</h2>
+
+      <!-- תג "הכי פופולרי" -->
+      <div style="display:inline-block;background:rgba(255,255,255,0.25);border:1.5px solid rgba(255,255,255,0.5);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:700;margin-bottom:16px;">🔥 הכי פופולרי</div>
+
+      <!-- מחיר -->
+      <div style="margin-bottom:18px;">
+        <div style="font-size:13px;opacity:0.8;margin-bottom:4px;text-decoration:line-through;">₪39.90 לחודש</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:4px;">
+          <span style="font-size:42px;font-weight:900;">₪19.90</span>
+          <span style="font-size:14px;opacity:0.85;">/ חודש</span>
+        </div>
+        <div style="font-size:12px;opacity:0.8;margin-top:4px;">חיסכון של 50% 🎉</div>
+      </div>
+
+      <button onclick="premiumClick()" style="background:white;color:#6C63FF;border:none;border-radius:16px;padding:16px 20px;font-size:16px;font-weight:900;cursor:pointer;width:100%;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:transform 0.15s;" onmousedown="this.style.transform='scale(0.97)'" onmouseup="this.style.transform='scale(1)'">
+        🚀 14 יום חינם — התחל עכשיו
+      </button>
+      <div style="font-size:11px;opacity:0.75;margin-top:10px;">💳 ללא חיוב • ביטול בלחיצה אחת</div>
+    </div>
+
+    <!-- פיצ'רים בכרטיסים צבעוניים -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+      <div style="background:white;border-radius:18px;padding:16px 12px;border:1.5px solid var(--border);text-align:center;">
+        <div style="font-size:32px;margin-bottom:8px;">🤖</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">AI חכם</div>
+        <div style="font-size:11px;color:var(--text-sub);line-height:1.4;">ניתוח הוצאות והמלצות אישיות</div>
+      </div>
+      <div style="background:white;border-radius:18px;padding:16px 12px;border:1.5px solid var(--border);text-align:center;">
+        <div style="font-size:32px;margin-bottom:8px;">🔔</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">התראות חכמות</div>
+        <div style="font-size:11px;color:var(--text-sub);line-height:1.4;">לפני חריגה מהתקציב</div>
+      </div>
+      <div style="background:white;border-radius:18px;padding:16px 12px;border:1.5px solid var(--border);text-align:center;">
+        <div style="font-size:32px;margin-bottom:8px;">🎯</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">יעדים ללא הגבלה</div>
+        <div style="font-size:11px;color:var(--text-sub);line-height:1.4;">לכל ילד כמה שרוצים</div>
+      </div>
+      <div style="background:white;border-radius:18px;padding:16px 12px;border:1.5px solid var(--border);text-align:center;">
+        <div style="font-size:32px;margin-bottom:8px;">📊</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">דוחות מתקדמים</div>
+        <div style="font-size:11px;color:var(--text-sub);line-height:1.4;">ניתוח שנתי מלא</div>
+      </div>
+    </div>
+
+    <!-- השוואה -->
+    <div class="card" style="margin-bottom:14px;">
+      <div class="section-title" style="margin-bottom:14px;text-align:center;">📋 חינם מול Premium</div>
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:0;font-size:13px;">
+        <div style="padding:8px 0;font-weight:700;color:var(--text-sub);border-bottom:1px solid var(--border);">תכונה</div>
+        <div style="padding:8px 12px;text-align:center;font-weight:700;color:var(--text-sub);border-bottom:1px solid var(--border);">חינם</div>
+        <div style="padding:8px 12px;text-align:center;font-weight:700;color:#6C63FF;border-bottom:1px solid var(--border);">👑 Premium</div>
+
+        <div style="padding:10px 0;color:var(--text);border-bottom:1px solid var(--border);">יעדי חיסכון</div>
+        <div style="padding:10px 12px;text-align:center;color:var(--text-sub);border-bottom:1px solid var(--border);">2</div>
+        <div style="padding:10px 12px;text-align:center;color:#6C63FF;font-weight:700;border-bottom:1px solid var(--border);">∞</div>
+
+        <div style="padding:10px 0;color:var(--text);border-bottom:1px solid var(--border);">ניתוח הוצאות</div>
+        <div style="padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);">✅</div>
+        <div style="padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);">✅</div>
+
+        <div style="padding:10px 0;color:var(--text);border-bottom:1px solid var(--border);">AI המלצות</div>
+        <div style="padding:10px 12px;text-align:center;color:#ddd;border-bottom:1px solid var(--border);">✕</div>
+        <div style="padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);">✅</div>
+
+        <div style="padding:10px 0;color:var(--text);border-bottom:1px solid var(--border);">דוחות מתקדמים</div>
+        <div style="padding:10px 12px;text-align:center;color:#ddd;border-bottom:1px solid var(--border);">✕</div>
+        <div style="padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);">✅</div>
+
+        <div style="padding:10px 0;color:var(--text);">התראות חכמות</div>
+        <div style="padding:10px 12px;text-align:center;color:#ddd;">✕</div>
+        <div style="padding:10px 12px;text-align:center;">✅</div>
+      </div>
+    </div>
+
+    <!-- ביקורות משתמשים -->
+    <div class="card" style="margin-bottom:14px;">
+      <div class="section-title" style="margin-bottom:14px;">⭐ מה אומרים המשתמשים</div>
+
+      <div style="background:var(--bg);border-radius:14px;padding:14px;margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--purple-light);display:flex;align-items:center;justify-content:center;font-size:20px;">👩</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);">מיכל כ.</div>
+            <div style="color:#FFD166;font-size:13px;">★★★★★</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--text);line-height:1.5;">"חסכנו ₪8,000 בשנה הראשונה! ה-AI ממש מבין את הדפוסים שלנו 🙌"</div>
+      </div>
+
+      <div style="background:var(--bg);border-radius:14px;padding:14px;margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:20px;">👨</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);">דני מ.</div>
+            <div style="color:#FFD166;font-size:13px;">★★★★★</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--text);line-height:1.5;">"הילדים שלי מתחרים מי יגיע ליעד ראשון — הכי כיף שעשיתי לחינוך פיננסי 💪"</div>
+      </div>
+
+      <div style="background:var(--bg);border-radius:14px;padding:14px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--coral-light);display:flex;align-items:center;justify-content:center;font-size:20px;">👩</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);">שירה ל.</div>
+            <div style="color:#FFD166;font-size:13px;">★★★★★</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--text);line-height:1.5;">"ההתראות הצילו אותי כמה פעמים מחריגת תקציב — שווה כל שקל!"</div>
+      </div>
+    </div>
+
+    <!-- CTA תחתון -->
+    <div id="premium-cta-area">
+      <button onclick="premiumClick()" id="premium-start-btn" style="background:linear-gradient(135deg,#6C63FF,#A78BF7);color:white;border:none;border-radius:16px;padding:18px;font-size:16px;font-weight:900;cursor:pointer;width:100%;box-shadow:0 6px 20px rgba(108,99,255,0.35);margin-bottom:8px;">
+        👑 התחל 14 יום חינם
+      </button>
+      <p style="font-size:11px;color:var(--text-sub);text-align:center;padding:4px 0 16px;">💳 ללא חיוב אוטומטי • ביטול בלחיצה אחת • מאובטח</p>
+    </div>
+    <div id="premium-active-area" style="display:none;">
+      <div style="background:var(--purple-light);border:1.5px solid var(--purple);border-radius:16px;padding:16px;text-align:center;margin-bottom:12px;">
+        <div style="font-size:22px;margin-bottom:6px;">👑</div>
+        <div style="font-size:15px;font-weight:800;color:var(--purple);margin-bottom:4px;">אתם פרימיום!</div>
+        <div style="font-size:12px;color:var(--text-sub);">14 יום חינם פעילים</div>
+      </div>
+      <button onclick="cancelPremium()" style="width:100%;background:white;border:1.5px solid #f5c4b3;color:#d4522a;border-radius:12px;padding:14px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:8px;">
+        ❌ בטל מנוי פרימיום
+      </button>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="screen" id="screen-profile">
+    <div class="profile-hero">
+      <div class="profile-avatar">👨‍👩‍👧‍👦</div>
+      <div class="profile-name">משפחת ריינט</div>
+      <div class="profile-sub">חשבון משפחתי • חינם</div>
+    </div>
+
+    <!-- בני המשפחה -->
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div class="section-title" style="margin-bottom:0;">👨‍👩‍👧 בני המשפחה</div>
+        <button class="btn-success" style="padding:6px 14px;font-size:12px;" onclick="addMember()">+ הוסף</button>
+      </div>
+      <div id="members-list"></div>
+    </div>
+
+    <!-- הגדרות תקציב -->
+    <div class="card">
+      <div class="section-title">💰 הגדרות תקציב חודשי</div>
+      <div class="setting-row">
+        <span class="setting-label">תקציב חודשי</span>
+        <div class="budget-input-row">
+          <span style="font-size:14px;color:#8e8e93;">₪</span>
+          <input class="budget-field" type="number" id="budget-field" value="0" style="width:90px;" />
+          <button class="save-btn" onclick="saveBudget()">שמור</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">יעד חיסכון שנתי</span>
+        <div class="budget-input-row">
+          <span style="font-size:14px;color:#8e8e93;">₪</span>
+          <input class="budget-field" type="number" id="goal-field" value="0" style="width:90px;" />
+          <button class="save-btn" onclick="saveGoal()">שמור</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- הגדרות -->
+    <div class="card">
+      <div class="section-title">⚙️ הגדרות</div>
+      <div class="setting-row">
+        <span class="setting-label">התראות על חריגה</span>
+        <div class="toggle" id="toggle-alerts" onclick="toggleSwitch('alerts')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">תזכורת חודשית</span>
+        <div class="toggle" id="toggle-reminder" onclick="toggleSwitch('reminder')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">מטבע</span>
+        <span class="setting-val">₪ שקל ישראלי</span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">שפה</span>
+        <span class="setting-val">עברית</span>
+      </div>
+    </div>
+
+    <!-- כפתור התנתקות -->
+    <button onclick="doLogout()" style="width:100%;background:white;border:1.5px solid #f5c4b3;color:#d4522a;border-radius:12px;padding:14px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:8px;">
+      🚪 התנתק
+    </button>
+    <button onclick="resetAllData()" style="width:100%;background:white;border:1.5px solid #e5e5ea;color:#8e8e93;border-radius:12px;padding:14px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:8px;">
+      🗑️ אפס את כל הנתונים שלי
+    </button>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav-bar" id="main-nav">
+    <div class="nav-item active" onclick="showScreen('home', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>בית</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('add', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      <span>הוסף</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('reports', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>דוחות</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('income', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span>הכנסות</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('kids', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M8 21v-1a4 4 0 0 1 8 0v1"/><path d="M16 11c1.5.5 3 1.5 3 3v1"/><path d="M8 11c-1.5.5-3 1.5-3 3v1"/></svg>
+      <span>ילדים</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('premium', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>פרימיום</span>
+    </div>
+    <div class="nav-item" onclick="showScreen('profile', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>פרופיל</span>
+    </div>
+  </nav>
+</div>
+
+<script>
+// ===== STATE =====
+let currentUser = null;
+let userBudget = 0;
+let userSavingsGoal = 0;
+let userExpenses = 0;
+let expensesList = [];
+let incomeList = [];
+let isPremium = false;
+
+// עדכן גרסה — שמור חשבונות משתמשים, נקה רק session
+const APP_VERSION = 'v4';
+if (localStorage.getItem('savekids_version') !== APP_VERSION) {
+  // שמור את כל נתוני המשתמשים לפני הניקוי
+  const keysToKeep = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && k.startsWith('savekids_')) keysToKeep.push([k, localStorage.getItem(k)]);
+  }
+  localStorage.clear();
+  keysToKeep.forEach(([k, v]) => localStorage.setItem(k, v));
+  localStorage.setItem('savekids_version', APP_VERSION);
+}
+
+// ===== localStorage helpers =====
+function saveToStorage() {
+  if (!currentUser) return;
+  const key = 'savekids_' + currentUser.email;
+  localStorage.setItem(key, JSON.stringify({
+    currentUser, userBudget, userSavingsGoal, userExpenses,
+    expensesList, kidsData, incomeList, isPremium
+  }));
+  // שמור גם איזה משתמש מחובר
+  localStorage.setItem('savekids_logged_in', currentUser.email);
+}
+
+function loadFromStorage(email) {
+  const key = 'savekids_' + email;
+  const raw = localStorage.getItem(key);
+  if (!raw) return null;
+  try { return JSON.parse(raw); } catch(e) { return null; }
+}
+
+function clearSession() {
+  localStorage.removeItem('savekids_logged_in');
+}
+
+// ===== ONBOARDING =====
+function nextOb(n) {
+  document.querySelectorAll('.ob-screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('ob-' + n).classList.add('active');
+}
+
+function goToAuth() {
+  document.querySelectorAll('.ob-screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('auth-screen').classList.add('active');
+}
+
+function switchToLogin() {
+  document.getElementById('register-form').style.display = 'none';
+  document.getElementById('login-form').style.display = 'block';
+  document.getElementById('auth-subtitle').textContent = 'התחברות לחשבון שלך';
+}
+
+function switchToRegister() {
+  document.getElementById('login-form').style.display = 'none';
+  document.getElementById('register-form').style.display = 'block';
+  document.getElementById('auth-subtitle').textContent = 'הרשמה ליצירת חשבון';
+}
+
+function doRegister() {
+  const name = document.getElementById('reg-name').value.trim();
+  const family = document.getElementById('reg-family').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const pass = document.getElementById('reg-pass').value;
+  const budget = parseFloat(document.getElementById('reg-budget').value) || 0;
+  if (!name) { alert('נא להזין שם'); return; }
+  if (!email || !email.includes('@')) { alert('נא להזין אימייל תקין'); return; }
+  if (pass.length < 6) { alert('הסיסמה חייבת להכיל לפחות 6 תווים'); return; }
+  // בדוק אם כבר קיים
+  if (loadFromStorage(email)) { alert('כבר קיים חשבון עם אימייל זה, נסה להתחבר'); switchToLogin(); return; }
+  currentUser = { name, family, email, pass };
+  userBudget = budget; userSavingsGoal = 0; userExpenses = 0;
+  expensesList = []; kidsData = [];
+  saveToStorage();
+  enterApp();
+}
+
+function doLogin() {
+  const email = document.getElementById('log-email').value.trim();
+  const pass = document.getElementById('log-pass').value;
+  if (!email || !pass) { alert('נא למלא את כל השדות'); return; }
+  const saved = loadFromStorage(email);
+  if (!saved) { alert('לא נמצא חשבון עם אימייל זה, נסה להירשם'); switchToRegister(); return; }
+  if (saved.currentUser.pass !== pass) { alert('סיסמה שגויה'); return; }
+  // טען נתונים
+  currentUser = saved.currentUser;
+  userBudget = saved.userBudget || 0;
+  userSavingsGoal = saved.userSavingsGoal || 0;
+  userExpenses = saved.userExpenses || 0;
+  expensesList = saved.expensesList || [];
+  kidsData = saved.kidsData || [];
+  incomeList = saved.incomeList || [];
+  isPremium = saved.isPremium || false;
+  localStorage.setItem('savekids_logged_in', email);
+  enterApp();
+}
+
+function enterApp() {
+  document.querySelectorAll('.ob-screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('auth-screen').classList.remove('active');
+  document.getElementById('main-nav').style.display = 'flex';
+  updateHomeScreen();
+  document.querySelector('.profile-name').textContent = 'משפחת ' + (currentUser.family || currentUser.name);
+  document.querySelector('.profile-sub').textContent = currentUser.email + ' • חינם';
+  document.getElementById('budget-field').value = userBudget;
+  document.getElementById('goal-field').value = userSavingsGoal;
+  // הצג את המשתמש המחובר ברשימת בני המשפחה
+  const membersList = document.getElementById('members-list');
+  membersList.innerHTML = `<div class="member-item">
+    <div class="member-avatar" style="background:var(--coral-light);">👤</div>
+    <div class="member-info"><div class="member-name">${currentUser.name}</div><div class="member-role">מנהל/ת חשבון</div></div>
+    <span class="member-badge badge-parent">הורה</span>
+  </div>`;
+  renderKids();
+  renderIncomeScreen();
+  updatePremiumUI();
+}
+
+function updateHomeScreen() {
+  const name = currentUser ? currentUser.name : '';
+  document.getElementById('home-greeting').textContent = '👋 שלום ' + name + '!';
+  const pct = userBudget > 0 ? Math.min(100, Math.round((userExpenses / userBudget) * 100)) : 0;
+  const diff = userBudget - userExpenses;
+  document.getElementById('stat-budget').textContent = '₪' + userBudget.toLocaleString('he-IL');
+  document.getElementById('stat-expenses').textContent = '₪' + userExpenses.toLocaleString('he-IL');
+  document.getElementById('stat-diff').textContent = (diff >= 0 ? '₪' : '-₪') + Math.abs(diff).toLocaleString('he-IL');
+  document.getElementById('budget-pct').textContent = pct + '%';
+  document.getElementById('budget-bar').style.width = pct + '%';
+  document.getElementById('alert-over').style.display = userExpenses > userBudget && userBudget > 0 ? 'flex' : 'none';
+  document.getElementById('goal-display').textContent = 'יעד: ₪' + userSavingsGoal.toLocaleString('he-IL');
+  document.getElementById('goal-remain').textContent = '₪' + userSavingsGoal.toLocaleString('he-IL') + ' נותרו';
+}
+
+function resetAllData() {
+  if (!confirm('האם אתה בטוח? כל הנתונים שלך יימחקו!')) return;
+  userBudget = 0; userExpenses = 0; userSavingsGoal = 0;
+  expensesList = []; kidsData = []; incomeList = []; isPremium = false;
+  saveToStorage();
+  updateHomeScreen();
+  renderKids();
+  alert('✅ כל הנתונים אופסו!');
+}
+
+function doLogout() {
+  if (!confirm('האם אתה בטוח שרוצה להתנתק?')) return;
+  saveToStorage(); // שמור לפני יציאה
+  clearSession();
+  currentUser = null;
+  userBudget = 0; userExpenses = 0; userSavingsGoal = 0;
+  expensesList = []; kidsData = []; incomeList = []; isPremium = false;
+  document.getElementById('main-nav').style.display = 'none';
+  document.querySelectorAll('.ob-screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('ob-1').classList.add('active');
+  ['reg-name','reg-family','reg-email','reg-pass','reg-budget','log-email','log-pass'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.value = '';
+  });
+  switchToRegister();
+  showScreen('home', document.querySelector('.nav-item'));
+}
+
+// הסתר nav בהתחלה, בדוק אם יש משתמש מחובר
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('main-nav').style.display = 'none';
+  const loggedIn = localStorage.getItem('savekids_logged_in');
+  if (loggedIn) {
+    const saved = loadFromStorage(loggedIn);
+    if (saved) {
+      currentUser = saved.currentUser;
+      userBudget = saved.userBudget || 0;
+      userSavingsGoal = saved.userSavingsGoal || 0;
+      userExpenses = saved.userExpenses || 0;
+      expensesList = saved.expensesList || [];
+      kidsData = saved.kidsData || [];
+      incomeList = saved.incomeList || [];
+      isPremium = saved.isPremium || false;
+      // עקוף onboarding ישירות לאפליקציה
+      document.querySelectorAll('.ob-screen').forEach(s => s.classList.remove('active'));
+      enterApp();
+      return;
+    }
+  }
+  // אחרת — הצג onboarding
+});
+
+function showScreen(name, navEl) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+  if (navEl) navEl.classList.add('active');
+  if (name === 'reports') { updateReportsScreen(); setTimeout(drawBarChart, 50); }
+  if (name === 'income') { renderIncomeScreen(); }
+  if (name === 'premium') { updatePremiumUI(); }
+}
+
+function updateReportsScreen() {
+  // עדכן סטטיסטיקות
+  const balance = userExpenses * -1;
+  document.getElementById('rep-balance').textContent = (balance >= 0 ? '₪' : '-₪') + Math.abs(balance).toLocaleString('he-IL');
+  document.getElementById('rep-balance').style.color = balance >= 0 ? 'var(--green)' : 'var(--coral)';
+  document.getElementById('rep-expenses').textContent = '₪' + userExpenses.toLocaleString('he-IL');
+  document.getElementById('rep-income').textContent = '₪0';
+
+  // תובנה
+  const insightText = document.getElementById('insight-text');
+  if (expensesList.length === 0) {
+    insightText.textContent = 'עדיין אין מספיק נתונים — הוסיפו הוצאות כדי לקבל תובנות! 📊';
+  } else {
+    // מצא קטגוריה מובילת
+    const catTotals = {};
+    expensesList.forEach(e => { catTotals[e.cat] = (catTotals[e.cat] || 0) + e.amount; });
+    const topCat = Object.entries(catTotals).sort((a,b) => b[1]-a[1])[0];
+    const pct = userBudget > 0 ? Math.round((userExpenses/userBudget)*100) : 0;
+    insightText.innerHTML = `הקטגוריה הגדולה ביותר: <strong>${topCat[0]}</strong> – ₪${topCat[1].toLocaleString('he-IL')} 🏆<br>
+    נוצל ${pct}% מהתקציב החודשי ${pct > 100 ? '– <span style="color:var(--coral);font-weight:600;">חרגתם!</span> 📊' : '✅'}`;
+  }
+
+  // גרף עוגה
+  const wrap = document.getElementById('donut-section-wrap');
+  if (expensesList.length === 0) {
+    wrap.innerHTML = `<div class="empty-state" style="padding:20px;"><div class="empty-emoji">📊</div><div class="empty-title" style="font-size:14px;">עדיין אין הוצאות</div><div class="empty-sub">הוסיפו הוצאות כדי לראות גרף</div></div>`;
+  } else {
+    const catTotals = {};
+    expensesList.forEach(e => { catTotals[e.cat] = (catTotals[e.cat] || 0) + e.amount; });
+    const colors = ['#7F77DD','#D4537E','#D85A30','#378ADD','#888780','#1a9e75'];
+    const entries = Object.entries(catTotals).sort((a,b) => b[1]-a[1]);
+    wrap.innerHTML = `<div class="donut-section">
+      <canvas id="donut-chart" width="120" height="120" style="flex-shrink:0;"></canvas>
+      <div style="flex:1;">${entries.map((e,i) => `<div class="legend-item"><div class="legend-dot" style="background:${colors[i%colors.length]}"></div><div><div class="legend-name">${e[0]}</div><div class="legend-amount">₪${e[1].toLocaleString('he-IL')}</div></div></div>`).join('')}</div>
+    </div>`;
+    setTimeout(() => drawDonutDynamic(entries, colors), 50);
+  }
+
+  // קטגוריות מובילות
+  const rankWrap = document.getElementById('rank-list-wrap');
+  if (expensesList.length === 0) {
+    rankWrap.innerHTML = `<div style="text-align:center;padding:16px;font-size:13px;color:var(--text-sub);">עדיין אין נתונים להצגה</div>`;
+  } else {
+    const catTotals = {};
+    const catIcons = {'אוכל':'🍽️','קניות':'🛍️','חשבונות':'📄','רכב':'🚗','ילדים':'👶','בריאות':'❤️','כללי':'📦'};
+    const catColors = {'אוכל':'#FAECE7','קניות':'#E6F1FB','חשבונות':'#EEEDFE','רכב':'#F1EFE8','ילדים':'#FBEAF0','בריאות':'#FEE9E9','כללי':'#F2F2F7'};
+    const barColors = ['#7F77DD','#D4537E','#D85A30','#378ADD','#888780','#1a9e75'];
+    expensesList.forEach(e => { catTotals[e.cat] = (catTotals[e.cat] || 0) + e.amount; });
+    const entries = Object.entries(catTotals).sort((a,b) => b[1]-a[1]).slice(0,5);
+    const max = entries[0][1];
+    rankWrap.innerHTML = entries.map((e,i) => `
+      <div class="rank-item">
+        <span class="rank-num">#${i+1}</span>
+        <div class="rank-icon" style="background:${catColors[e[0]]||'#f2f2f7'}">${catIcons[e[0]]||'📦'}</div>
+        <div class="rank-info"><div class="rank-name">${e[0]}</div><div class="rank-bar-wrap"><div class="rank-bar" style="width:${Math.round(e[1]/max*100)}%;background:${barColors[i]}"></div></div></div>
+        <div class="rank-right"><div class="rank-amount">₪${e[1].toLocaleString('he-IL')}</div><div class="rank-pct">${Math.round(e[1]/userExpenses*100)}%</div></div>
+      </div>`).join('');
+  }
+}
+
+function drawDonutDynamic(entries, colors) {
+  const canvas = document.getElementById('donut-chart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const total = entries.reduce((s,[,v]) => s+v, 0);
+  let start = -Math.PI/2;
+  ctx.clearRect(0,0,120,120);
+  entries.forEach(([,val],i) => {
+    const slice = (val/total)*2*Math.PI;
+    ctx.beginPath(); ctx.moveTo(60,60);
+    ctx.arc(60,60,55,start,start+slice); ctx.closePath();
+    ctx.fillStyle = colors[i%colors.length]; ctx.fill();
+    start += slice;
+  });
+  ctx.beginPath(); ctx.arc(60,60,32,0,2*Math.PI);
+  ctx.fillStyle = 'white'; ctx.fill();
+}
+
+// ---- INCOME ----
+function showAddIncomeModal() {
+  document.getElementById('income-amount-input').value = '';
+  document.getElementById('income-note-input').value = '';
+  document.querySelectorAll('#add-income-modal .cat-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('#add-income-modal .cat-btn').classList.add('active');
+  document.getElementById('add-income-modal').style.display = 'flex';
+}
+function hideAddIncomeModal() {
+  document.getElementById('add-income-modal').style.display = 'none';
+}
+function selectIncomeSource(el) {
+  document.querySelectorAll('#add-income-modal .cat-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+function addIncome() {
+  const amount = parseFloat(document.getElementById('income-amount-input').value);
+  if (!amount || amount <= 0) { alert('נא להזין סכום'); return; }
+  const srcEl = document.querySelector('#add-income-modal .cat-btn.active');
+  const source = srcEl ? srcEl.dataset.src : 'אחר';
+  const note = document.getElementById('income-note-input').value || '';
+  incomeList.push({ amount, source, note, date: new Date().toLocaleDateString('he-IL') });
+  hideAddIncomeModal();
+  saveToStorage();
+  renderIncomeScreen();
+  alert('✅ ההכנסה נשמרה! ₪' + amount.toLocaleString('he-IL'));
+}
+function renderIncomeScreen() {
+  const now = new Date();
+  const monthNames = ['ינואר','פברואר','מרץ','אפריל','מאי','יוני','יולי','אוגוסט','ספטמבר','אוקטובר','נובמבר','דצמבר'];
+  document.getElementById('income-month-display').textContent = monthNames[now.getMonth()] + ' ' + now.getFullYear();
+  // סה"כ החודש
+  const thisMonth = now.getMonth(), thisYear = now.getFullYear();
+  const monthTotal = incomeList.reduce((s, inc) => {
+    const parts = inc.date.split('.');
+    if (parts.length === 3) {
+      const d = parseInt(parts[0]), m = parseInt(parts[1])-1, y = parseInt(parts[2]);
+      if (m === thisMonth && y === thisYear) return s + inc.amount;
+    }
+    return s + inc.amount; // אם תאריך לא ברור — כלול
+  }, 0);
+  document.getElementById('income-total-display').textContent = '₪' + monthTotal.toLocaleString('he-IL');
+  const empty = document.getElementById('income-empty-state');
+  const list = document.getElementById('income-list');
+  if (incomeList.length === 0) { empty.style.display = 'block'; list.innerHTML = ''; return; }
+  empty.style.display = 'none';
+  const srcIcons = {'משכורת':'💼','פרילנס':'💻','בונוס':'🎁','אחר':'📦'};
+  list.innerHTML = [...incomeList].reverse().map((inc, i) => `
+    <div class="card" style="display:flex;align-items:center;gap:12px;padding:14px 16px;margin-bottom:10px;">
+      <div style="width:44px;height:44px;border-radius:14px;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">${srcIcons[inc.source]||'📦'}</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:700;color:var(--text);">${inc.source}</div>
+        <div style="font-size:12px;color:var(--text-sub);margin-top:2px;">${inc.note || ''} ${inc.date}</div>
+      </div>
+      <div style="font-size:16px;font-weight:800;color:var(--green-dark);">+₪${inc.amount.toLocaleString('he-IL')}</div>
+    </div>`).join('');
+}
+
+function selectCat(el) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function addExpense() {
+  const amount = parseFloat(document.getElementById('amount-input').value);
+  if (!amount || amount <= 0) { alert('נא להזין סכום'); return; }
+  const cat = document.querySelector('.cat-btn.active .cat-name')?.textContent || 'כללי';
+  const note = document.querySelector('.note-input')?.value || '';
+  userExpenses += amount;
+  expensesList.push({ amount, cat, note, date: new Date().toLocaleDateString('he-IL') });
+  updateHomeScreen();
+  saveToStorage();
+  alert('ההוצאה נשמרה! ₪' + amount.toLocaleString('he-IL'));
+  document.getElementById('amount-input').value = '';
+  if (document.querySelector('.note-input')) document.querySelector('.note-input').value = '';
+}
+
+// ---- KIDS SAVINGS ----
+let kidsData = [];
+let activeKidIndex = -1;
+let selectedEmoji = '👦';
+const MONTHS_LEFT = 6; // חודשים לסוף שנה
+
+function showAddKidForm() {
+  document.getElementById('add-kid-modal').style.display = 'flex';
+  document.getElementById('kid-name').value = '';
+  document.getElementById('kid-goal').value = '';
+  document.getElementById('kid-goal-name').value = '';
+  selectedEmoji = '👦';
+  document.querySelectorAll('.emoji-pick').forEach(e => e.classList.remove('active-emoji'));
+  document.querySelectorAll('.emoji-pick')[0].classList.add('active-emoji');
+}
+function hideAddKidForm() { document.getElementById('add-kid-modal').style.display = 'none'; }
+
+function pickEmoji(el) {
+  document.querySelectorAll('.emoji-pick').forEach(e => e.classList.remove('active-emoji'));
+  el.classList.add('active-emoji');
+  selectedEmoji = el.textContent;
+}
+
+function addKid() {
+  const name = document.getElementById('kid-name').value.trim();
+  const goal = parseFloat(document.getElementById('kid-goal').value);
+  const goalName = document.getElementById('kid-goal-name').value.trim() || 'יעד חיסכון';
+  if (!name) { alert('נא להזין שם'); return; }
+  if (!goal || goal <= 0) { alert('נא להזין יעד חיסכון'); return; }
+  const colors = ['#FAECE7','#E8F8F2','#EEF1FB','#FEF9EE','#F0EBFE'];
+  kidsData.push({ name, emoji: selectedEmoji, goal, goalName, saved: 0, color: colors[kidsData.length % colors.length], celebrated: false });
+  hideAddKidForm();
+  renderKids();
+  saveToStorage();
+}
+
+function renderKids() {
+  const list = document.getElementById('kids-list');
+  const empty = document.getElementById('kids-empty');
+  list.innerHTML = '';
+  if (kidsData.length === 0) { empty.style.display = 'block'; updateKidsTotal(); return; }
+  empty.style.display = 'none';
+
+  kidsData.forEach((kid, i) => {
+    const pct = Math.min(100, Math.round((kid.saved / kid.goal) * 100));
+    const remaining = Math.max(0, kid.goal - kid.saved);
+    const done = kid.saved >= kid.goal;
+    const monthly = remaining > 0 ? Math.ceil(remaining / MONTHS_LEFT) : 0;
+
+    // המלצת הפקדה
+    let tip = '', tipColor = '#1a9e75', tipBg = '#e8f8f2';
+    if (done) {
+      tip = '🏆 הגעתם ליעד! כל הכבוד!';
+      tipColor = '#1a9e75'; tipBg = '#e8f8f2';
+    } else if (pct >= 75) {
+      tip = `🔥 כמעט שם! עוד ₪${remaining.toLocaleString('he-IL')} בלבד`;
+      tipColor = '#d4522a'; tipBg = '#fdf0eb';
+    } else {
+      tip = `💡 מומלץ להפקיד ₪${monthly.toLocaleString('he-IL')} בחודש כדי להגיע ליעד ב-${MONTHS_LEFT} חודשים`;
+      tipColor = '#185fa0'; tipBg = '#e8f1fd';
+    }
+
+    const div = document.createElement('div');
+    div.className = 'kid-card';
+    div.innerHTML = `
+      <div class="kid-card-header">
+        <div class="kid-avatar-big" style="background:${kid.color}">${kid.emoji}</div>
+        <div style="flex:1">
+          <div class="kid-name-big">${kid.name}${done ? ' 🎉' : ''}</div>
+          <div class="kid-goal-label">🎯 ${kid.goalName}</div>
+        </div>
+        <div style="font-size:22px;font-weight:700;color:${done?'#1a9e75':'#1c1c1e'}">${pct}%</div>
+      </div>
+      <div class="kid-amounts">
+        <div class="kid-amount-box"><div class="kid-amount-val green">₪${kid.saved.toLocaleString('he-IL')}</div><div class="kid-amount-lbl">חסכו</div></div>
+        <div class="kid-amount-box"><div class="kid-amount-val" style="color:#8e8e93;">₪${remaining.toLocaleString('he-IL')}</div><div class="kid-amount-lbl">נותר</div></div>
+        <div class="kid-amount-box"><div class="kid-amount-val" style="color:#1c1c1e;">₪${kid.goal.toLocaleString('he-IL')}</div><div class="kid-amount-lbl">יעד</div></div>
+      </div>
+      <div class="kid-progress-wrap"><div class="kid-progress-fill" style="width:${pct}%"></div></div>
+      <div class="kid-progress-label"><span>${pct < 33 ? '🌱 מתחילים' : pct < 66 ? '🚀 בדרך הנכונה' : pct < 100 ? '⭐ כמעט שם' : '🏆 הושלם!'}</span><span>${pct}%</span></div>
+      <div style="background:${tipBg};border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:13px;color:${tipColor};font-weight:500;">${tip}</div>
+      <div class="kid-actions">
+        <button class="btn-deposit" onclick="showAddSavings(${i})">💰 הפקד סכום</button>
+        <button class="btn-delete-kid" onclick="deleteKid(${i})">🗑️</button>
+      </div>`;
+    list.appendChild(div);
+  });
+  updateKidsTotal();
+}
+
+function updateKidsTotal() {
+  const total = kidsData.reduce((s, k) => s + k.saved, 0);
+  document.getElementById('kids-total').textContent = '₪' + total.toLocaleString('he-IL');
+  const active = kidsData.filter(k => k.saved < k.goal).length;
+  const done = kidsData.filter(k => k.saved >= k.goal).length;
+  let summary = `${kidsData.length} ילדים`;
+  if (active > 0) summary += ` • ${active} יעדים פעילים`;
+  if (done > 0) summary += ` • ${done} הושלמו 🏆`;
+  document.getElementById('kids-summary').textContent = summary;
+}
+
+function showAddSavings(i) {
+  activeKidIndex = i;
+  const kid = kidsData[i];
+  const remaining = Math.max(0, kid.goal - kid.saved);
+  const monthly = remaining > 0 ? Math.ceil(remaining / MONTHS_LEFT) : 0;
+  document.getElementById('add-savings-title').textContent = `הפקד לחיסכון של ${kid.name}`;
+  document.getElementById('savings-amount').value = '';
+  // הצג המלצה בתוך המודאל
+  let rec = document.getElementById('savings-rec');
+  if (!rec) {
+    rec = document.createElement('div');
+    rec.id = 'savings-rec';
+    rec.style.cssText = 'background:#e8f1fd;border-radius:10px;padding:10px 12px;font-size:13px;color:#185fa0;font-weight:500;margin-bottom:16px;';
+    document.getElementById('savings-amount').parentNode.insertAdjacentElement('afterend', rec);
+  }
+  rec.textContent = monthly > 0 ? `💡 המלצה: הפקד ₪${monthly.toLocaleString('he-IL')} כדי להגיע ליעד ב-${MONTHS_LEFT} חודשים` : '🏆 היעד כבר הושג!';
+  document.getElementById('add-savings-modal').style.display = 'flex';
+}
+function hideAddSavings() { document.getElementById('add-savings-modal').style.display = 'none'; }
+
+function depositSavings() {
+  const amount = parseFloat(document.getElementById('savings-amount').value);
+  if (!amount || amount <= 0) { alert('נא להזין סכום'); return; }
+  const kid = kidsData[activeKidIndex];
+  const wasNotDone = kid.saved < kid.goal;
+  kid.saved += amount;
+  hideAddSavings();
+  renderKids();
+  saveToStorage();
+  if (wasNotDone && kid.saved >= kid.goal && !kid.celebrated) {
+    kid.celebrated = true;
+    saveToStorage();
+    setTimeout(() => showCelebration(kid.name, kid.emoji), 200);
+  }
+}
+
+function showCelebration(name, emoji) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:999;display:flex;align-items:center;justify-content:center;';
+  overlay.innerHTML = `
+    <div style="background:white;border-radius:24px;padding:36px 28px;text-align:center;max-width:320px;width:90%;animation:popIn 0.4s ease;">
+      <div style="font-size:64px;margin-bottom:12px;">${emoji}</div>
+      <div style="font-size:48px;margin-bottom:8px;">🎉</div>
+      <h2 style="font-size:22px;font-weight:700;color:#1c1c1e;margin-bottom:8px;">כל הכבוד ${name}!</h2>
+      <p style="font-size:15px;color:#8e8e93;margin-bottom:24px;">הגעתם ליעד החיסכון!<br>אתם מדהימים! ⭐</p>
+      <div id="confetti-area" style="font-size:28px;margin-bottom:20px;letter-spacing:4px;">🎊🏆🎊</div>
+      <button onclick="this.closest('div[style*=fixed]').remove()" style="background:#1a9e75;color:white;border:none;border-radius:12px;padding:14px 32px;font-size:16px;font-weight:700;cursor:pointer;width:100%;">
+        🙌 יאללה!
+      </button>
+    </div>`;
+  document.body.appendChild(overlay);
+  // קונפטי בטקסט
+  const emojis = ['🎉','⭐','🌟','🎊','🏆','✨','💫'];
+  let c = 0;
+  const confetti = setInterval(() => {
+    const area = document.getElementById('confetti-area');
+    if (area) area.textContent = emojis.sort(() => Math.random()-0.5).slice(0,5).join('');
+    if (++c > 8) clearInterval(confetti);
+  }, 300);
+}
+
+function deleteKid(i) {
+  if (!confirm(`למחוק את ${kidsData[i].name} מתוכנית החיסכון?`)) return;
+  kidsData.splice(i, 1);
+  renderKids();
+  saveToStorage();
+}
+
+function premiumClick() {
+  const btn = document.getElementById('premium-start-btn');
+  btn.textContent = '✅ מצוין! מפעילים...';
+  btn.disabled = true;
+  setTimeout(() => {
+    isPremium = true;
+    saveToStorage();
+    updatePremiumUI();
+    alert('🎉 ברוכים הבאים ל-SaveKids Premium!\n14 יום חינם מתחילים עכשיו');
+    btn.textContent = '👑 התחל 14 יום חינם';
+    btn.disabled = false;
+  }, 1000);
+}
+
+function cancelPremium() {
+  if (!confirm('האם אתה בטוח שברצונך לבטל את הפרימיום?')) return;
+  isPremium = false;
+  saveToStorage();
+  updatePremiumUI();
+  alert('✅ המנוי בוטל בהצלחה. אנחנו מקווים לראות אותך שוב!');
+}
+
+function updatePremiumUI() {
+  const ctaArea = document.getElementById('premium-cta-area');
+  const activeArea = document.getElementById('premium-active-area');
+  if (!ctaArea || !activeArea) return;
+  if (isPremium) {
+    ctaArea.style.display = 'none';
+    activeArea.style.display = 'block';
+  } else {
+    ctaArea.style.display = 'block';
+    activeArea.style.display = 'none';
+  }
+}
+
+function forgotPassword() {
+  const email = document.getElementById('log-email').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('נא להזין את האימייל שלך קודם, ואז ללחוץ על "שכחתי סיסמה"');
+    return;
+  }
+  const saved = loadFromStorage(email);
+  if (!saved) {
+    alert('לא נמצא חשבון עם האימייל הזה.
+נסי להירשם כמשתמש חדש.');
+    switchToRegister();
+    return;
+  }
+  alert('🔑 הסיסמה שלך היא:\n' + saved.currentUser.pass + '\n\nשמרי אותה במקום בטוח!');
+}
+
+function toggleSwitch(id) {
+  const el = document.getElementById('toggle-' + id);
+  el.classList.toggle('off');
+}
+
+function saveBudget() {
+  const val = parseFloat(document.getElementById('budget-field').value);
+  if (val && val > 0) { userBudget = val; updateHomeScreen(); saveToStorage(); alert('התקציב החודשי עודכן ל-₪' + val.toLocaleString('he-IL')); }
+}
+
+function saveGoal() {
+  const val = parseFloat(document.getElementById('goal-field').value);
+  if (val && val > 0) { userSavingsGoal = val; updateHomeScreen(); saveToStorage(); alert('יעד החיסכון עודכן ל-₪' + val.toLocaleString('he-IL')); }
+}
+
+function addMember() {
+  const name = prompt('שם בן/בת המשפחה:');
+  if (!name) return;
+  const list = document.getElementById('members-list');
+  const emojis = ['👦','👧','🧒'];
+  const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+  const div = document.createElement('div');
+  div.className = 'member-item';
+  div.innerHTML = `<div class="member-avatar" style="background:#f2f2f7;">${emoji}</div>
+    <div class="member-info"><div class="member-name">${name}</div><div class="member-role">חבר משפחה</div></div>
+    <span class="member-badge badge-child">ילד/ה</span>`;
+  list.appendChild(div);
+}
+
+function drawBarChart() {
+  const canvas = document.getElementById('bar-chart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  const months = ['ינו', 'פבר', 'מרץ', 'אפר', 'מאי', 'יוני'];
+  const income =   [0, 0, 0, 0, 0, 0];
+  const expenses = [0, 0, 0, 0, 0, userExpenses];
+
+  const maxVal = Math.max(...income, ...expenses, 1);
+  const padLeft = 50, padBottom = 30, padTop = 16, padRight = 10;
+  const chartW = W - padLeft - padRight;
+  const chartH = H - padBottom - padTop;
+  const groupW = chartW / months.length;
+  const barW = groupW * 0.3;
+
+  ctx.strokeStyle = '#f2f2f7';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = padTop + (chartH / 4) * i;
+    ctx.beginPath(); ctx.moveTo(padLeft, y); ctx.lineTo(W - padRight, y); ctx.stroke();
+    const val = Math.round(maxVal - (maxVal / 4) * i);
+    ctx.fillStyle = '#8e8e93'; ctx.font = '10px -apple-system,sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('₪' + (val >= 1000 ? (val/1000).toFixed(0)+'K' : val), 0, y + 4);
+  }
+
+  months.forEach((m, i) => {
+    const x = padLeft + groupW * i + groupW / 2;
+    const ih = (income[i] / maxVal) * chartH;
+    ctx.fillStyle = '#3DBE8F';
+    if (ih > 0) roundRect(ctx, x - barW - 2, padTop + chartH - ih, barW, ih, 4);
+    const eh = (expenses[i] / maxVal) * chartH;
+    ctx.fillStyle = '#FF7C6E';
+    if (eh > 0) roundRect(ctx, x + 2, padTop + chartH - eh, barW, eh, 4);
+    ctx.fillStyle = '#8e8e93'; ctx.font = '10px -apple-system,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(m, x, H - 8);
+  });
+}
+
+  const maxVal = Math.max(...income, ...expenses);
+  const padLeft = 50, padBottom = 30, padTop = 16, padRight = 10;
+  const chartW = W - padLeft - padRight;
+  const chartH = H - padBottom - padTop;
+  const groupW = chartW / months.length;
+  const barW = groupW * 0.3;
+
+  // grid lines
+  ctx.strokeStyle = '#f2f2f7';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = padTop + (chartH / 4) * i;
+    ctx.beginPath(); ctx.moveTo(padLeft, y); ctx.lineTo(W - padRight, y); ctx.stroke();
+    const val = Math.round(maxVal - (maxVal / 4) * i);
+    ctx.fillStyle = '#8e8e93'; ctx.font = '10px -apple-system,sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('₪' + (val >= 1000 ? (val/1000).toFixed(0)+'K' : val), 0, y + 4);
+  }
+
+  months.forEach((m, i) => {
+    const x = padLeft + groupW * i + groupW / 2;
+
+    // income bar
+    const ih = (income[i] / maxVal) * chartH;
+    ctx.fillStyle = '#1a9e75';
+    roundRect(ctx, x - barW - 2, padTop + chartH - ih, barW, ih, 4);
+
+    // expense bar
+    const eh = (expenses[i] / maxVal) * chartH;
+    ctx.fillStyle = '#d4522a';
+    roundRect(ctx, x + 2, padTop + chartH - eh, barW, eh, 4);
+
+    // month label
+    ctx.fillStyle = '#8e8e93'; ctx.font = '10px -apple-system,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(m, x, H - 8);
+  });
+
+function roundRect(ctx, x, y, w, h, r) {
+  if (h <= 0) return;
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h);
+  ctx.lineTo(x, y + h);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+  ctx.fill();
+}
+</script>
+</body>
+</html>
